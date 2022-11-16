@@ -59,3 +59,32 @@
     border: transparent !important;
     font-size: 30px;
   }
+
+  .fc-toolbar-title {
+    font-size: 20px !important;
+    text-transform: capitalize;
+  }
+
+  .fc-scroller{
+    text-transform: capitalize;
+  }
+
+  .fc-today-button{
+    background-color: #b92626!important;
+    border-color: #b92626!important;
+  }
+
+  .fc-prev-button{
+    background-color: #b92626!important;
+    border-color: #b92626!important;
+  } 
+  
+  .fc-next-button{
+    background-color: #b92626!important;
+    border-color: #b92626!important;
+  }
+
+  .btn.disabled{
+    background-color: #b92626!important;
+    border-color: #b92626!important;
+  }
