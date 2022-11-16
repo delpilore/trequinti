@@ -7,7 +7,7 @@
 
     <!-- Titolo scheda + favicon -->
     <title>3/5 Trekking Team</title>
-    <!-- TODO: aggiungere inconcina nella tab del browser -->
+    <link rel='icon' href='./assets/favicon.ico' type='image/x-icon'/>
 
     <!-- Integrazione JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
@@ -20,47 +20,84 @@
   </head>
   <body class="d-flex flex-column h-100">
 
+    <!-- Navbar -->
     <header>
-        <!-- Fixed navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md" style="background-color: #b92626;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Fixed navbar</a>
+                <a class="navbar-brand text-light" href="#">        
+                    <img src="./assets/logo.png" alt="" width="80" height="50">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="bi bi-list text-light"></i>
                 </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
+                <div class="collapse navbar-collapse text-light text-center" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link text-light" href="#">La nostra storia</a>
+                    </li> -->
+                </div>
             </div>
         </nav>
     </header>
       
-      <!-- Begin page content -->
-    <main class="flex-shrink-0">
+    <!-- Contenuto Pagina -->
+    <main class="flex-shrink-0 mb-5">
         <div class="container">
-            <h1 class="mt-5">Sticky footer with fixed navbar</h1>
-            <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code class="small">padding-top: 60px;</code> on the <code class="small">main &gt; .container</code>.</p>
-            <p>Back to <a href="../examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
+            <!-- Titolo pagina -->
+            <h1>Benvenuto nell'applicazione ufficiale di 3/5 Trekking Team!</h1>
+            <p class="lead">Qui potrai consultare la nostra storia, vedere i nostri eventi in programma e tanto altro!</p>
+
+            <!-- Corpo pagina - Album foto (poi magari da rendere linkabili)-->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-2">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="./assets/lucchio.png" preserveAspectRatio="xMidYMid slice" focusable="false"></rect></img>
+                        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+                        <div class="card-body">
+                          <p class="card-text">La prossima escursione in programma!</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Penna di Lucchio (LU)</small>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="./assets/ultima_escursione.jpg" preserveAspectRatio="xMidYMid slice" focusable="false"></rect></img>
+                        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+                        <div class="card-body">
+                          <p class="card-text">Una foto tratta dalla nostra ultima escursione!</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Parco dell'Orecchiella (LU)</small>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="./assets/team.jpg" preserveAspectRatio="xMidYMid slice" focusable="false"></rect></img>
+                        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+                        <div class="card-body">
+                          <p class="card-text">I fondatori del progetto 3/5 Trekking Team!</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Tutti originari di Lucca! (anche se due di loro si vergognano ad ammetterlo...)</small>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
         </div>
     </main>
       
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
-            <span class="text-muted">Place sticky footer content here.</span>
+    <!-- Footer -->
+    <footer class="footer mt-5 py-3 bg-light">
+        <div class="container text-center">
+            <a href="http://t.me/trequintitrek" target="_blank" style="text-decoration:none"><span class="text-muted">Telegram&nbsp;&nbsp; | </span></a>
+            <a href="https://www.facebook.com/trequintitrek" target="_blank" style="text-decoration:none"><span class="text-muted">&nbsp;&nbsp; Facebook&nbsp;&nbsp; |</span></a>
+            <a href="https://www.instagram.com/trequintitrek" target="_blank" style="text-decoration:none"><span class="text-muted">&nbsp;&nbsp; Instagram</span></a>
         </div>
     </footer>
 
