@@ -1,6 +1,3 @@
-// Change this to your repository name
-var GHPATH = '/trequinti';
- 
 // Choose a different app prefix name
 var APP_PREFIX = 'trequinti_';
  
@@ -13,8 +10,8 @@ var VERSION = 'version_01';
 // The files to make available for offline use. make sure to add 
 // others to this list
 var URLS = [    
-  `${GHPATH}/`,
-  `${GHPATH}/index.html`,
-  `${GHPATH}/style.css`,
-  `${GHPATH}/calendario.html`
+  'trequinti/',
+  'trequinti/index.html',
+  'trequinti/style.css',
+  'trequinti/calendario.html'
 ]
