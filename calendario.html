@@ -76,7 +76,13 @@
                     handleWindowResize: true,
                     themeSystem: 'bootstrap5',
                     height: "auto",
-                    locale: "it"
+                    locale: "it",
+                    eventClick: function(event) {
+                        if (event.event.url) {
+                            event.jsEvent.preventDefault()
+                            window.open(event.event.url, "_blank");
+                        }
+                    }
                 });
                 calendar.render();
 

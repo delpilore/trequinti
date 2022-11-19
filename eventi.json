@@ -5,14 +5,18 @@
             "start": "2022-11-20",
             "title": "Penna di Lucchio",
             "allDay": true,
-            "backgroundColor": "#b92626"
+            "backgroundColor": "#b92626",
+            "borderColor": "#b92626",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         },
         {
             "id": 2,
             "start": "2022-11-27",
             "title": "Monte Penna",
             "allDay": true,
-            "backgroundColor": "#b92626"
+            "backgroundColor": "#b92626",
+            "borderColor": "#b92626",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         }
     ]
  }
