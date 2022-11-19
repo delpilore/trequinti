@@ -22,8 +22,8 @@
     <script src='fullcalendar/lib/main.js'></script>
     <script src='fullcalendar/lib/locales/it.js'></script>
   </head>
-  <body class="d-flex flex-column">
 
+  <body>
     <!-- Navbar -->
     <header>
         <nav class="navbar navbar-expand-md" style="background-color: #b92626;">
@@ -48,14 +48,13 @@
     </header>
       
     <!-- Contenuto Pagina -->
-    <div class="container mt-4" style="width: 100%;">
-        <div class="col-12">
-            <div id="calendar"></div>
-        </div>
+    <div class="container-sm mt-4" style="flex:1">
+        <div id="calendar"></div>
+        <div id="blank" style="height:50px"></div>
     </div> 
-      
+
     <!-- Footer -->
-    <footer class="footer py-3 bg-light mt-5">
+    <footer id="foot" class="footer py-3 bg-light">
         <div class="container text-center">
             <a href="http://t.me/trequintitrek" target="_blank" style="text-decoration:none"><span class="text-muted">Telegram&nbsp;&nbsp; | </span></a>
             <a href="https://www.facebook.com/trequintitrek" target="_blank" style="text-decoration:none"><span class="text-muted">&nbsp;&nbsp; Facebook&nbsp;&nbsp; |</span></a>
@@ -68,23 +67,22 @@
 
     <script>
         $( document ).ready(function() {
-            var eventi = [];
+            // Recupero il JSON che contiene gli eventi e istanzio il calendario passando gli eventi
             $.getJSON('https://delpilore.github.io/trequinti/eventi.json', function(data) {
-                eventi = data.eventi;
-            });
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    events: data.eventi,
+                    handleWindowResize: true,
+                    themeSystem: 'bootstrap5',
+                    height: "auto",
+                    locale: "it"
+                });
+                calendar.render();
 
-            console.log(eventi);
-
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                events: eventi,
-                handleWindowResize: true,
-                themeSystem: 'bootstrap5',
-                aspectRatio: 0.8,
-                locale: "it"
+                // Aggiusto il footer solo dopo che è stato creato il calendario in modo che torni con l'altezza
+                //$("#foot").css({ "position": "absolute", "bottom": 0, "width": "100%" });
             });
-            calendar.render();
         });
     </script>
   </body>

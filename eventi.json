@@ -3,12 +3,16 @@
         {
             "id": 1,
             "start": "2022-11-20",
-            "title": "Penna di Lucchio"
+            "title": "Penna di Lucchio",
+            "allDay": true,
+            "backgroundColor": "#b92626"
         },
         {
             "id": 2,
             "start": "2022-11-27",
-            "title": "Monte Penna"
+            "title": "Monte Penna",
+            "allDay": true,
+            "backgroundColor": "#b92626"
         }
     ]
  }

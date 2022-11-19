@@ -88,3 +88,15 @@
     background-color: #b92626!important;
     border-color: #b92626!important;
   }
+
+
+
+
+body{ min-height: 100vh; margin:0; }
+
+header{ min-height:50px; }
+footer{ min-height:50px; }
+
+/* The article fills all the space between header & footer */
+body{ display:flex; flex-direction:column; }
+article{ flex:1; }
