@@ -1,0 +1,21 @@
+{
+    "name": "3/5 Trekking Team App",
+    "short_name": "TreQuintiApp",
+    "description": "L'unica ed inimitabile app di 3/5 trekking team!",
+   
+    "scope": "/trequinti/",
+    "start_url": "/trequinti/",
+   
+    "background_color": "#b92626",
+    "theme_color": "#b92626",
+   
+    "display": "standalone", 
+   
+    "icons": [
+        {
+          "src": "/trequinti/assets/icon.png",
+          "type": "image/png",
+          "sizes": "700x700"
+        }
+    ]
+  }
