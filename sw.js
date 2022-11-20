@@ -1,11 +1,9 @@
 var APP_PREFIX = 'TreQuintiApp_'     // Identifier for this app (this needs to be consistent across every cache update)
-var VERSION = 'version_02'              // Version of the off-line cache (change this value everytime you want to update cache)
+var VERSION = 'version_03'              // Version of the off-line cache (change this value everytime you want to update cache)
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [                            // Add URL you want to cache in this list.
-  '/trequinti/',                     // If you have separate JS/CSS files,
-  '/trequinti/index.html',            // add path to those files here
+  '/trequinti/',                     
   '/trequinti/style.css',
-  '/trequinti/calendario.html'
 ]
 
 // Respond with cached resources
